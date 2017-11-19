@@ -13,7 +13,7 @@
 
 char j=0,x;
 char Card_No[13];
-char rfid_N0[13]="14001BD4DE05";// Replac this with the ID of your card
+char rfid_N0[13]="14001BD4DE05";// Replace this with the ID of your card
 
 SoftwareSerial mySerial(10, 11); // RX, TX
  
@@ -32,7 +32,7 @@ void loop()
     x=mySerial.read();          
     Card_No[j] =x;                    // Save the read_data to an array
     j++;
-    if(j==12)                         // After intake of 12 character 
+    if(j==12)                         // Appending a \0 
     {  
       Card_No[j]='\0';
       j=0;
